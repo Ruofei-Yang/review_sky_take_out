@@ -5,7 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class EmployeeDTO implements Serializable {
+//public class EmployeeDTO implements Serializable {    只有用到Redis之类的才写这个序列化
+public class EmployeeDTO  {
+
 
     private Long id;
 
