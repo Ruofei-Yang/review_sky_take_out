@@ -21,6 +21,9 @@ mybatis:
     #开启驼峰命名
     map-underscore-to-camel-case: true
 
+    pagehelper:
+      helper-dialect: mysql
+
 logging:
   level:
     com:
