@@ -74,10 +74,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         //补全剩余字段
         employee.setStatus(1);
         employee.setPassword("RDEFAULT_PASSWOD");
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
-        employee.setCreateUser(10L);
-        employee.setUpdateUser(10L);
 
         employeeMapper.save(employee);
 
@@ -116,8 +112,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         BeanUtils.copyProperties(employeeDTO, employee);
 
         //你是直接覆盖，所以往employee里装的只需要有可能修改的字段就可以，不改的用默认值也行！
-        employee.setUpdateTime(LocalDateTime.now());
-        employee.setUpdateUser(10L);
 //        employee.setCreateTime(LocalDateTime.now());
 //        employee.setCreateUser(10L);          这两个字段不用复制！！status也不用
 
